@@ -1,0 +1,3 @@
+# Challenge #2 Guess The Secret Number
+
+The answer is cryptographically hashed and it is impossible to revert the hash. Let's inpsect the contract carefully, the parameter of *guess* is uint8, which is a *eight-bit unsigned integer*. This basically means the possible answer is in the range 0 - 255, so we only needs to compare the hash of all the possibilities within the range with the answer hash to find the secret number.
